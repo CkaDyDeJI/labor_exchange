@@ -49,9 +49,7 @@ namespace labor_exchange
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             archiveDataGridView.Dispose();
-            archiveDataGridView = new DataGridView();
-            archiveDataGridView.Parent = panel1;
-            archiveDataGridView.Dock = DockStyle.Fill;
+            archiveDataGridView = new DataGridView {Parent = panel1, Dock = DockStyle.Fill};
             //archiveDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //mARKSDataGridView.Columns.Clear();
             //mARKSDataGridView.Rows.Clear();

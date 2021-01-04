@@ -48,18 +48,11 @@ namespace labor_exchange
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.archiveBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labor_exchangeDataSet = new labor_exchange.labor_exchangeDataSet();
-            this.archiveTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.archiveTableAdapter();
             this.tableAdapterManager = new labor_exchange.labor_exchangeDataSetTableAdapters.TableAdapterManager();
-            this.archive_personTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.archive_personTableAdapter();
-            this.archive_positionTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.archive_positionTableAdapter();
-            this.companyTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.companyTableAdapter();
-            this.job_bookTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.job_bookTableAdapter();
-            this.joblessTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.joblessTableAdapter();
-            this.positionTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.positionTableAdapter();
-            this.propositionTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.propositionTableAdapter();
             this.archive_personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.archive_positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,10 +60,18 @@ namespace labor_exchange
             this.joblessBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.propositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.archiveTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.archiveTableAdapter();
+            this.archive_personTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.archive_personTableAdapter();
+            this.archive_positionTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.archive_positionTableAdapter();
+            this.companyTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.companyTableAdapter();
+            this.job_bookTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.job_bookTableAdapter();
+            this.joblessTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.joblessTableAdapter();
+            this.positionTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.positionTableAdapter();
+            this.propositionTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.propositionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.archiveBindingNavigator)).BeginInit();
             this.archiveBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.archiveBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labor_exchangeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archive_personBindingSource)).BeginInit();
@@ -80,7 +81,6 @@ namespace labor_exchange
             ((System.ComponentModel.ISupportInitialize)(this.joblessBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propositionBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // archiveBindingNavigator
@@ -109,7 +109,7 @@ namespace labor_exchange
             this.archiveBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.archiveBindingNavigator.Name = "archiveBindingNavigator";
             this.archiveBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.archiveBindingNavigator.Size = new System.Drawing.Size(907, 25);
+            this.archiveBindingNavigator.Size = new System.Drawing.Size(1097, 25);
             this.archiveBindingNavigator.TabIndex = 0;
             this.archiveBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -165,6 +165,7 @@ namespace labor_exchange
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -256,6 +257,14 @@ namespace labor_exchange
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.archiveDataGridView);
+            this.panel1.Location = new System.Drawing.Point(33, 103);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(563, 301);
+            this.panel1.TabIndex = 5;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "person_id";
@@ -272,50 +281,10 @@ namespace labor_exchange
             this.labor_exchangeDataSet.DataSetName = "labor_exchangeDataSet";
             this.labor_exchangeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // archiveTableAdapter
-            // 
-            this.archiveTableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.archive_personTableAdapter = this.archive_personTableAdapter;
-            this.tableAdapterManager.archive_positionTableAdapter = this.archive_positionTableAdapter;
-            this.tableAdapterManager.archiveTableAdapter = this.archiveTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.companyTableAdapter = this.companyTableAdapter;
-            this.tableAdapterManager.job_bookTableAdapter = this.job_bookTableAdapter;
-            this.tableAdapterManager.joblessTableAdapter = this.joblessTableAdapter;
-            this.tableAdapterManager.positionTableAdapter = this.positionTableAdapter;
-            this.tableAdapterManager.propositionTableAdapter = this.propositionTableAdapter;
             this.tableAdapterManager.UpdateOrder = labor_exchange.labor_exchangeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // archive_personTableAdapter
-            // 
-            this.archive_personTableAdapter.ClearBeforeFill = true;
-            // 
-            // archive_positionTableAdapter
-            // 
-            this.archive_positionTableAdapter.ClearBeforeFill = true;
-            // 
-            // companyTableAdapter
-            // 
-            this.companyTableAdapter.ClearBeforeFill = true;
-            // 
-            // job_bookTableAdapter
-            // 
-            this.job_bookTableAdapter.ClearBeforeFill = true;
-            // 
-            // joblessTableAdapter
-            // 
-            this.joblessTableAdapter.ClearBeforeFill = true;
-            // 
-            // positionTableAdapter
-            // 
-            this.positionTableAdapter.ClearBeforeFill = true;
-            // 
-            // propositionTableAdapter
-            // 
-            this.propositionTableAdapter.ClearBeforeFill = true;
             // 
             // archive_personBindingSource
             // 
@@ -352,19 +321,43 @@ namespace labor_exchange
             this.propositionBindingSource.DataMember = "proposition";
             this.propositionBindingSource.DataSource = this.labor_exchangeDataSet;
             // 
-            // panel1
+            // archiveTableAdapter
             // 
-            this.panel1.Controls.Add(this.archiveDataGridView);
-            this.panel1.Location = new System.Drawing.Point(33, 103);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 301);
-            this.panel1.TabIndex = 5;
+            this.archiveTableAdapter.ClearBeforeFill = true;
+            // 
+            // archive_personTableAdapter
+            // 
+            this.archive_personTableAdapter.ClearBeforeFill = true;
+            // 
+            // archive_positionTableAdapter
+            // 
+            this.archive_positionTableAdapter.ClearBeforeFill = true;
+            // 
+            // companyTableAdapter
+            // 
+            this.companyTableAdapter.ClearBeforeFill = true;
+            // 
+            // job_bookTableAdapter
+            // 
+            this.job_bookTableAdapter.ClearBeforeFill = true;
+            // 
+            // joblessTableAdapter
+            // 
+            this.joblessTableAdapter.ClearBeforeFill = true;
+            // 
+            // positionTableAdapter
+            // 
+            this.positionTableAdapter.ClearBeforeFill = true;
+            // 
+            // propositionTableAdapter
+            // 
+            this.propositionTableAdapter.ClearBeforeFill = true;
             // 
             // Tables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 611);
+            this.ClientSize = new System.Drawing.Size(1097, 611);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
@@ -377,6 +370,7 @@ namespace labor_exchange
             this.archiveBindingNavigator.ResumeLayout(false);
             this.archiveBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.archiveBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labor_exchangeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archive_personBindingSource)).EndInit();
@@ -386,7 +380,6 @@ namespace labor_exchange
             ((System.ComponentModel.ISupportInitialize)(this.joblessBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.propositionBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,7 +389,6 @@ namespace labor_exchange
 
         private labor_exchangeDataSet labor_exchangeDataSet;
         private System.Windows.Forms.BindingSource archiveBindingSource;
-        private labor_exchangeDataSetTableAdapters.archiveTableAdapter archiveTableAdapter;
         private labor_exchangeDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator archiveBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -414,23 +406,24 @@ namespace labor_exchange
         private System.Windows.Forms.DataGridView archiveDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private labor_exchangeDataSetTableAdapters.archive_personTableAdapter archive_personTableAdapter;
         private System.Windows.Forms.BindingSource archive_personBindingSource;
-        private labor_exchangeDataSetTableAdapters.archive_positionTableAdapter archive_positionTableAdapter;
         private System.Windows.Forms.BindingSource archive_positionBindingSource;
-        private labor_exchangeDataSetTableAdapters.companyTableAdapter companyTableAdapter;
         private System.Windows.Forms.BindingSource companyBindingSource;
-        private labor_exchangeDataSetTableAdapters.job_bookTableAdapter job_bookTableAdapter;
         private System.Windows.Forms.BindingSource job_bookBindingSource;
-        private labor_exchangeDataSetTableAdapters.joblessTableAdapter joblessTableAdapter;
         private System.Windows.Forms.BindingSource joblessBindingSource;
-        private labor_exchangeDataSetTableAdapters.positionTableAdapter positionTableAdapter;
         private System.Windows.Forms.BindingSource positionBindingSource;
-        private labor_exchangeDataSetTableAdapters.propositionTableAdapter propositionTableAdapter;
         private System.Windows.Forms.BindingSource propositionBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private labor_exchangeDataSetTableAdapters.archiveTableAdapter archiveTableAdapter;
+        private labor_exchangeDataSetTableAdapters.archive_personTableAdapter archive_personTableAdapter;
+        private labor_exchangeDataSetTableAdapters.archive_positionTableAdapter archive_positionTableAdapter;
+        private labor_exchangeDataSetTableAdapters.companyTableAdapter companyTableAdapter;
+        private labor_exchangeDataSetTableAdapters.job_bookTableAdapter job_bookTableAdapter;
+        private labor_exchangeDataSetTableAdapters.joblessTableAdapter joblessTableAdapter;
+        private labor_exchangeDataSetTableAdapters.positionTableAdapter positionTableAdapter;
+        private labor_exchangeDataSetTableAdapters.propositionTableAdapter propositionTableAdapter;
     }
 }
