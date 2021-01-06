@@ -103,10 +103,10 @@ namespace labor_exchange
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.tableAdapterManager = new labor_exchange.labor_exchangeDataSetTableAdapters.TableAdapterManager();
-            this.position_viewTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.position_viewTableAdapter();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.tableAdapterManager = new labor_exchange.labor_exchangeDataSetTableAdapters.TableAdapterManager();
             this.person_viewTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.person_viewTableAdapter();
+            this.position_viewTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.position_viewTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -777,6 +777,11 @@ namespace labor_exchange
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
             this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "docx";
+            this.saveFileDialog1.FileName = "report";
+            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.archive_personTableAdapter = null;
@@ -791,18 +796,13 @@ namespace labor_exchange
             this.tableAdapterManager.propositionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = labor_exchange.labor_exchangeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // position_viewTableAdapter
-            // 
-            this.position_viewTableAdapter.ClearBeforeFill = true;
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.DefaultExt = "docx";
-            this.saveFileDialog1.FileName = "report";
-            // 
             // person_viewTableAdapter
             // 
             this.person_viewTableAdapter.ClearBeforeFill = true;
+            // 
+            // position_viewTableAdapter
+            // 
+            this.position_viewTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -895,7 +895,6 @@ namespace labor_exchange
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.BindingSource position_viewBindingSource;
-        private labor_exchangeDataSetTableAdapters.position_viewTableAdapter position_viewTableAdapter;
         private System.Windows.Forms.DataGridView position_viewDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
@@ -929,6 +928,7 @@ namespace labor_exchange
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private labor_exchangeDataSetTableAdapters.person_viewTableAdapter person_viewTableAdapter;
+        private labor_exchangeDataSetTableAdapters.position_viewTableAdapter position_viewTableAdapter;
     }
 }
 

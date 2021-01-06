@@ -109,7 +109,7 @@ namespace labor_exchange
             this.archiveBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.archiveBindingNavigator.Name = "archiveBindingNavigator";
             this.archiveBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.archiveBindingNavigator.Size = new System.Drawing.Size(777, 25);
+            this.archiveBindingNavigator.Size = new System.Drawing.Size(789, 25);
             this.archiveBindingNavigator.TabIndex = 0;
             this.archiveBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -175,7 +175,6 @@ namespace labor_exchange
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -365,7 +364,7 @@ namespace labor_exchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 388);
+            this.ClientSize = new System.Drawing.Size(789, 403);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);

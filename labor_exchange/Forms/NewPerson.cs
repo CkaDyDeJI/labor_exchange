@@ -31,7 +31,7 @@ namespace labor_exchange
             string[] comboBoxPosibilities;
             using (var conn = new MySqlConnection(Information.connString))
             {
-                comboBoxPosibilities = conn.Query<string>($"select name from archive_position join company on company.bik = archive_position.compamy_id where company.name = '{comboBox1.Text}'").ToArray();
+                comboBoxPosibilities = conn.Query<string>($"select archive_position.name from archive_position join company on company.bik = archive_position.company_id where company.name = '{comboBox1.Text}'").ToArray();
             }
 
             comboBox2.DataSource = comboBoxPosibilities;
@@ -42,7 +42,7 @@ namespace labor_exchange
         {
             try {
                 using (var conn = new MySqlConnection(Information.connString)) {
-                    conn.Query ($"insert into jobless values ({textBox1.Text}, '{textBox2.Text}', '{textBox3.Text}', '{textBox4.Text}', '{textBox5.Text}', '{textBox6.Text}'); insert into archive_person select jobless.* from jobless where jobless.passport = {textBox1.Text}");
+                    conn.Query ($"insert into jobless values ({textBox1.Text}, '{textBox2.Text}', '{textBox3.Text}', '{textBox4.Text}', '{textBox5.Text}', '{textBox6.Text}')");
 
                     var tempComp = conn.QueryFirstOrDefault <string> ($"select bik from company where name = '{comboBox1.Text}'");
                     var tempPos = conn.QueryFirstOrDefault <string> ($"select id from archive_position where name = '{comboBox2.Text}'");
