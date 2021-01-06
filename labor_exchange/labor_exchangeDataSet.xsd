@@ -7,35 +7,6 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="labor_exchangeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="labor_exchangeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.labor_exchange.Properties.Settings.GlobalReference.Default.labor_exchangeConnectionString" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="person_viewTableAdapter" GeneratorDataComponentClassName="person_viewTableAdapter" Name="person_view" UserDataComponentName="person_viewTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="labor_exchangeConnectionString (Settings)" DbObjectName="labor_exchange.person_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `passport`, `fio`, `adress`, `contacts`, `family`, `liveplace`, `profession`, `education`, `requirements`, `last_company_name`, `position_name`, `conditions`, `payment`, `reason` FROM `labor_exchange`.`person_view`</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="passport" DataSetColumn="passport" />
-              <Mapping SourceColumn="fio" DataSetColumn="fio" />
-              <Mapping SourceColumn="adress" DataSetColumn="adress" />
-              <Mapping SourceColumn="contacts" DataSetColumn="contacts" />
-              <Mapping SourceColumn="family" DataSetColumn="family" />
-              <Mapping SourceColumn="liveplace" DataSetColumn="liveplace" />
-              <Mapping SourceColumn="profession" DataSetColumn="profession" />
-              <Mapping SourceColumn="education" DataSetColumn="education" />
-              <Mapping SourceColumn="requirements" DataSetColumn="requirements" />
-              <Mapping SourceColumn="last_company_name" DataSetColumn="last_company_name" />
-              <Mapping SourceColumn="position_name" DataSetColumn="position_name" />
-              <Mapping SourceColumn="conditions" DataSetColumn="conditions" />
-              <Mapping SourceColumn="payment" DataSetColumn="payment" />
-              <Mapping SourceColumn="reason" DataSetColumn="reason" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="position_viewTableAdapter" GeneratorDataComponentClassName="position_viewTableAdapter" Name="position_view" UserDataComponentName="position_viewTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="labor_exchangeConnectionString (Settings)" DbObjectName="labor_exchange.position_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -524,6 +495,35 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="person_viewTableAdapter" GeneratorDataComponentClassName="person_viewTableAdapter" Name="person_view" UserDataComponentName="person_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="labor_exchangeConnectionString (Settings)" DbObjectName="labor_exchange.person_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `passport`, `fio`, `adress`, `contacts`, `family`, `liveplace`, `profession`, `education`, `requirements`, `last_company_name`, `position_name`, `conditions`, `payment`, `reason` FROM `labor_exchange`.`person_view`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="passport" DataSetColumn="passport" />
+              <Mapping SourceColumn="fio" DataSetColumn="fio" />
+              <Mapping SourceColumn="adress" DataSetColumn="adress" />
+              <Mapping SourceColumn="contacts" DataSetColumn="contacts" />
+              <Mapping SourceColumn="family" DataSetColumn="family" />
+              <Mapping SourceColumn="liveplace" DataSetColumn="liveplace" />
+              <Mapping SourceColumn="profession" DataSetColumn="profession" />
+              <Mapping SourceColumn="education" DataSetColumn="education" />
+              <Mapping SourceColumn="requirements" DataSetColumn="requirements" />
+              <Mapping SourceColumn="last_company_name" DataSetColumn="last_company_name" />
+              <Mapping SourceColumn="position_name" DataSetColumn="position_name" />
+              <Mapping SourceColumn="conditions" DataSetColumn="conditions" />
+              <Mapping SourceColumn="payment" DataSetColumn="payment" />
+              <Mapping SourceColumn="reason" DataSetColumn="reason" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -532,6 +532,275 @@
   <xs:element name="labor_exchangeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="labor_exchangeDataSet" msprop:Generator_UserDSName="labor_exchangeDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="position_view" msprop:Generator_TableClassName="position_viewDataTable" msprop:Generator_TableVarName="tableposition_view" msprop:Generator_RowChangedName="position_viewRowChanged" msprop:Generator_TablePropName="position_view" msprop:Generator_RowDeletingName="position_viewRowDeleting" msprop:Generator_RowChangingName="position_viewRowChanging" msprop:Generator_RowEvHandlerName="position_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="position_viewRowDeleted" msprop:Generator_RowClassName="position_viewRow" msprop:Generator_UserTableName="position_view" msprop:Generator_RowEvArgName="position_viewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="company_name" msprop:Generator_ColumnVarNameInTable="columncompany_name" msprop:Generator_ColumnPropNameInRow="company_name" msprop:Generator_ColumnPropNameInTable="company_nameColumn" msprop:Generator_UserColumnName="company_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="position_name" msprop:Generator_ColumnVarNameInTable="columnposition_name" msprop:Generator_ColumnPropNameInRow="position_name" msprop:Generator_ColumnPropNameInTable="position_nameColumn" msprop:Generator_UserColumnName="position_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="payment" msprop:Generator_ColumnVarNameInTable="columnpayment" msprop:Generator_ColumnPropNameInRow="payment" msprop:Generator_ColumnPropNameInTable="paymentColumn" msprop:Generator_UserColumnName="payment" type="xs:int" />
+              <xs:element name="conditions" msprop:Generator_ColumnVarNameInTable="columnconditions" msprop:Generator_ColumnPropNameInRow="conditions" msprop:Generator_ColumnPropNameInTable="conditionsColumn" msprop:Generator_UserColumnName="conditions" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="requirements" msprop:Generator_ColumnVarNameInTable="columnrequirements" msprop:Generator_ColumnPropNameInRow="requirements" msprop:Generator_ColumnPropNameInTable="requirementsColumn" msprop:Generator_UserColumnName="requirements" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="archive" msprop:Generator_TableClassName="archiveDataTable" msprop:Generator_TableVarName="tablearchive" msprop:Generator_RowChangedName="archiveRowChanged" msprop:Generator_TablePropName="archive" msprop:Generator_RowDeletingName="archiveRowDeleting" msprop:Generator_RowChangingName="archiveRowChanging" msprop:Generator_RowEvHandlerName="archiveRowChangeEventHandler" msprop:Generator_RowDeletedName="archiveRowDeleted" msprop:Generator_RowClassName="archiveRow" msprop:Generator_UserTableName="archive" msprop:Generator_RowEvArgName="archiveRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="person_id" msprop:Generator_ColumnVarNameInTable="columnperson_id" msprop:Generator_ColumnPropNameInRow="person_id" msprop:Generator_ColumnPropNameInTable="person_idColumn" msprop:Generator_UserColumnName="person_id" type="xs:int" />
+              <xs:element name="position_id" msprop:Generator_ColumnVarNameInTable="columnposition_id" msprop:Generator_ColumnPropNameInRow="position_id" msprop:Generator_ColumnPropNameInTable="position_idColumn" msprop:Generator_UserColumnName="position_id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="archive_person" msprop:Generator_TableClassName="archive_personDataTable" msprop:Generator_TableVarName="tablearchive_person" msprop:Generator_RowChangedName="archive_personRowChanged" msprop:Generator_TablePropName="archive_person" msprop:Generator_RowDeletingName="archive_personRowDeleting" msprop:Generator_RowChangingName="archive_personRowChanging" msprop:Generator_RowEvHandlerName="archive_personRowChangeEventHandler" msprop:Generator_RowDeletedName="archive_personRowDeleted" msprop:Generator_RowClassName="archive_personRow" msprop:Generator_UserTableName="archive_person" msprop:Generator_RowEvArgName="archive_personRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="passport" msprop:Generator_ColumnVarNameInTable="columnpassport" msprop:Generator_ColumnPropNameInRow="passport" msprop:Generator_ColumnPropNameInTable="passportColumn" msprop:Generator_UserColumnName="passport" type="xs:int" />
+              <xs:element name="fio" msprop:Generator_ColumnVarNameInTable="columnfio" msprop:Generator_ColumnPropNameInRow="fio" msprop:Generator_ColumnPropNameInTable="fioColumn" msprop:Generator_UserColumnName="fio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adress" msprop:Generator_ColumnVarNameInTable="columnadress" msprop:Generator_ColumnPropNameInRow="adress" msprop:Generator_ColumnPropNameInTable="adressColumn" msprop:Generator_UserColumnName="adress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contacts" msprop:Generator_ColumnVarNameInTable="columncontacts" msprop:Generator_ColumnPropNameInRow="contacts" msprop:Generator_ColumnPropNameInTable="contactsColumn" msprop:Generator_UserColumnName="contacts">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="family" msprop:Generator_ColumnVarNameInTable="columnfamily" msprop:Generator_ColumnPropNameInRow="family" msprop:Generator_ColumnPropNameInTable="familyColumn" msprop:Generator_UserColumnName="family" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="liveplace" msprop:Generator_ColumnVarNameInTable="columnliveplace" msprop:Generator_ColumnPropNameInRow="liveplace" msprop:Generator_ColumnPropNameInTable="liveplaceColumn" msprop:Generator_UserColumnName="liveplace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="archive_position" msprop:Generator_TableClassName="archive_positionDataTable" msprop:Generator_TableVarName="tablearchive_position" msprop:Generator_RowChangedName="archive_positionRowChanged" msprop:Generator_TablePropName="archive_position" msprop:Generator_RowDeletingName="archive_positionRowDeleting" msprop:Generator_RowChangingName="archive_positionRowChanging" msprop:Generator_RowEvHandlerName="archive_positionRowChangeEventHandler" msprop:Generator_RowDeletedName="archive_positionRowDeleted" msprop:Generator_RowClassName="archive_positionRow" msprop:Generator_UserTableName="archive_position" msprop:Generator_RowEvArgName="archive_positionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="company_id" msprop:Generator_ColumnVarNameInTable="columncompany_id" msprop:Generator_ColumnPropNameInRow="company_id" msprop:Generator_ColumnPropNameInTable="company_idColumn" msprop:Generator_UserColumnName="company_id" type="xs:int" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="payment" msprop:Generator_ColumnVarNameInTable="columnpayment" msprop:Generator_ColumnPropNameInRow="payment" msprop:Generator_ColumnPropNameInTable="paymentColumn" msprop:Generator_UserColumnName="payment" type="xs:int" />
+              <xs:element name="conditions" msprop:Generator_ColumnVarNameInTable="columnconditions" msprop:Generator_ColumnPropNameInRow="conditions" msprop:Generator_ColumnPropNameInTable="conditionsColumn" msprop:Generator_UserColumnName="conditions" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="requirements" msprop:Generator_ColumnVarNameInTable="columnrequirements" msprop:Generator_ColumnPropNameInRow="requirements" msprop:Generator_ColumnPropNameInTable="requirementsColumn" msprop:Generator_UserColumnName="requirements" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="company" msprop:Generator_TableClassName="companyDataTable" msprop:Generator_TableVarName="tablecompany" msprop:Generator_RowChangedName="companyRowChanged" msprop:Generator_TablePropName="company" msprop:Generator_RowDeletingName="companyRowDeleting" msprop:Generator_RowChangingName="companyRowChanging" msprop:Generator_RowEvHandlerName="companyRowChangeEventHandler" msprop:Generator_RowDeletedName="companyRowDeleted" msprop:Generator_RowClassName="companyRow" msprop:Generator_UserTableName="company" msprop:Generator_RowEvArgName="companyRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BIK" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBIK" msprop:Generator_ColumnPropNameInRow="BIK" msprop:Generator_ColumnPropNameInTable="BIKColumn" msprop:Generator_UserColumnName="BIK" type="xs:int" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adress" msprop:Generator_ColumnVarNameInTable="columnadress" msprop:Generator_ColumnPropNameInRow="adress" msprop:Generator_ColumnPropNameInTable="adressColumn" msprop:Generator_UserColumnName="adress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="phone" msprop:Generator_ColumnVarNameInTable="columnphone" msprop:Generator_ColumnPropNameInRow="phone" msprop:Generator_ColumnPropNameInTable="phoneColumn" msprop:Generator_UserColumnName="phone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="owner" msprop:Generator_ColumnVarNameInTable="columnowner" msprop:Generator_ColumnPropNameInRow="owner" msprop:Generator_ColumnPropNameInTable="ownerColumn" msprop:Generator_UserColumnName="owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="job_book" msprop:Generator_TableClassName="job_bookDataTable" msprop:Generator_TableVarName="tablejob_book" msprop:Generator_RowChangedName="job_bookRowChanged" msprop:Generator_TablePropName="job_book" msprop:Generator_RowDeletingName="job_bookRowDeleting" msprop:Generator_RowChangingName="job_bookRowChanging" msprop:Generator_RowEvHandlerName="job_bookRowChangeEventHandler" msprop:Generator_RowDeletedName="job_bookRowDeleted" msprop:Generator_RowClassName="job_bookRow" msprop:Generator_UserTableName="job_book" msprop:Generator_RowEvArgName="job_bookRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="id_person" msprop:Generator_ColumnVarNameInTable="columnid_person" msprop:Generator_ColumnPropNameInRow="id_person" msprop:Generator_ColumnPropNameInTable="id_personColumn" msprop:Generator_UserColumnName="id_person" type="xs:int" />
+              <xs:element name="profession" msprop:Generator_ColumnVarNameInTable="columnprofession" msprop:Generator_ColumnPropNameInRow="profession" msprop:Generator_ColumnPropNameInTable="professionColumn" msprop:Generator_UserColumnName="profession">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="education" msprop:Generator_ColumnVarNameInTable="columneducation" msprop:Generator_ColumnPropNameInRow="education" msprop:Generator_ColumnPropNameInTable="educationColumn" msprop:Generator_UserColumnName="education">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="requirements" msprop:Generator_ColumnVarNameInTable="columnrequirements" msprop:Generator_ColumnPropNameInRow="requirements" msprop:Generator_ColumnPropNameInTable="requirementsColumn" msprop:Generator_UserColumnName="requirements" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="last_job_place_id" msprop:Generator_ColumnVarNameInTable="columnlast_job_place_id" msprop:Generator_ColumnPropNameInRow="last_job_place_id" msprop:Generator_ColumnPropNameInTable="last_job_place_idColumn" msprop:Generator_UserColumnName="last_job_place_id" type="xs:int" />
+              <xs:element name="position" msprop:Generator_ColumnVarNameInTable="columnposition" msprop:Generator_ColumnPropNameInRow="position" msprop:Generator_ColumnPropNameInTable="positionColumn" msprop:Generator_UserColumnName="position" type="xs:int" />
+              <xs:element name="reason" msprop:Generator_ColumnVarNameInTable="columnreason" msprop:Generator_ColumnPropNameInRow="reason" msprop:Generator_ColumnPropNameInTable="reasonColumn" msprop:Generator_UserColumnName="reason">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="jobless" msprop:Generator_TableClassName="joblessDataTable" msprop:Generator_TableVarName="tablejobless" msprop:Generator_RowChangedName="joblessRowChanged" msprop:Generator_TablePropName="jobless" msprop:Generator_RowDeletingName="joblessRowDeleting" msprop:Generator_RowChangingName="joblessRowChanging" msprop:Generator_RowEvHandlerName="joblessRowChangeEventHandler" msprop:Generator_RowDeletedName="joblessRowDeleted" msprop:Generator_RowClassName="joblessRow" msprop:Generator_UserTableName="jobless" msprop:Generator_RowEvArgName="joblessRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="passport" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpassport" msprop:Generator_ColumnPropNameInRow="passport" msprop:Generator_ColumnPropNameInTable="passportColumn" msprop:Generator_UserColumnName="passport" type="xs:int" />
+              <xs:element name="fio" msprop:Generator_ColumnVarNameInTable="columnfio" msprop:Generator_ColumnPropNameInRow="fio" msprop:Generator_ColumnPropNameInTable="fioColumn" msprop:Generator_UserColumnName="fio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adress" msprop:Generator_ColumnVarNameInTable="columnadress" msprop:Generator_ColumnPropNameInRow="adress" msprop:Generator_ColumnPropNameInTable="adressColumn" msprop:Generator_UserColumnName="adress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contacts" msprop:Generator_ColumnVarNameInTable="columncontacts" msprop:Generator_ColumnPropNameInRow="contacts" msprop:Generator_ColumnPropNameInTable="contactsColumn" msprop:Generator_UserColumnName="contacts">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="family" msprop:Generator_ColumnVarNameInTable="columnfamily" msprop:Generator_ColumnPropNameInRow="family" msprop:Generator_ColumnPropNameInTable="familyColumn" msprop:Generator_UserColumnName="family" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="liveplace" msprop:Generator_ColumnVarNameInTable="columnliveplace" msprop:Generator_ColumnPropNameInRow="liveplace" msprop:Generator_ColumnPropNameInTable="liveplaceColumn" msprop:Generator_UserColumnName="liveplace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="position" msprop:Generator_TableClassName="positionDataTable" msprop:Generator_TableVarName="tableposition" msprop:Generator_RowChangedName="positionRowChanged" msprop:Generator_TablePropName="position" msprop:Generator_RowDeletingName="positionRowDeleting" msprop:Generator_RowChangingName="positionRowChanging" msprop:Generator_RowEvHandlerName="positionRowChangeEventHandler" msprop:Generator_RowDeletedName="positionRowDeleted" msprop:Generator_RowClassName="positionRow" msprop:Generator_UserTableName="position" msprop:Generator_RowEvArgName="positionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="company_id" msprop:Generator_ColumnVarNameInTable="columncompany_id" msprop:Generator_ColumnPropNameInRow="company_id" msprop:Generator_ColumnPropNameInTable="company_idColumn" msprop:Generator_UserColumnName="company_id" type="xs:int" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="payment" msprop:Generator_ColumnVarNameInTable="columnpayment" msprop:Generator_ColumnPropNameInRow="payment" msprop:Generator_ColumnPropNameInTable="paymentColumn" msprop:Generator_UserColumnName="payment" type="xs:int" />
+              <xs:element name="conditions" msprop:Generator_ColumnVarNameInTable="columnconditions" msprop:Generator_ColumnPropNameInRow="conditions" msprop:Generator_ColumnPropNameInTable="conditionsColumn" msprop:Generator_UserColumnName="conditions" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="requirements" msprop:Generator_ColumnVarNameInTable="columnrequirements" msprop:Generator_ColumnPropNameInRow="requirements" msprop:Generator_ColumnPropNameInTable="requirementsColumn" msprop:Generator_UserColumnName="requirements" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="proposition" msprop:Generator_TableClassName="propositionDataTable" msprop:Generator_TableVarName="tableproposition" msprop:Generator_RowChangedName="propositionRowChanged" msprop:Generator_TablePropName="proposition" msprop:Generator_RowDeletingName="propositionRowDeleting" msprop:Generator_RowChangingName="propositionRowChanging" msprop:Generator_RowEvHandlerName="propositionRowChangeEventHandler" msprop:Generator_RowDeletedName="propositionRowDeleted" msprop:Generator_RowClassName="propositionRow" msprop:Generator_UserTableName="proposition" msprop:Generator_RowEvArgName="propositionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="person_id" msprop:Generator_ColumnVarNameInTable="columnperson_id" msprop:Generator_ColumnPropNameInRow="person_id" msprop:Generator_ColumnPropNameInTable="person_idColumn" msprop:Generator_UserColumnName="person_id" type="xs:int" />
+              <xs:element name="position_id" msprop:Generator_ColumnVarNameInTable="columnposition_id" msprop:Generator_ColumnPropNameInRow="position_id" msprop:Generator_ColumnPropNameInTable="position_idColumn" msprop:Generator_UserColumnName="position_id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="person_view" msprop:Generator_TableClassName="person_viewDataTable" msprop:Generator_TableVarName="tableperson_view" msprop:Generator_TablePropName="person_view" msprop:Generator_RowDeletingName="person_viewRowDeleting" msprop:Generator_RowChangingName="person_viewRowChanging" msprop:Generator_RowEvHandlerName="person_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="person_viewRowDeleted" msprop:Generator_UserTableName="person_view" msprop:Generator_RowChangedName="person_viewRowChanged" msprop:Generator_RowEvArgName="person_viewRowChangeEvent" msprop:Generator_RowClassName="person_viewRow">
           <xs:complexType>
             <xs:sequence>
@@ -592,14 +861,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="last_company_name" msprop:Generator_ColumnVarNameInTable="columnlast_company_name" msprop:Generator_ColumnPropNameInRow="last_company_name" msprop:Generator_ColumnPropNameInTable="last_company_nameColumn" msprop:Generator_UserColumnName="last_company_name">
+              <xs:element name="last_company_name" msprop:Generator_ColumnVarNameInTable="columnlast_company_name" msprop:Generator_ColumnPropNameInRow="last_company_name" msprop:Generator_ColumnPropNameInTable="last_company_nameColumn" msprop:Generator_UserColumnName="last_company_name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="45" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="position_name" msprop:Generator_ColumnVarNameInTable="columnposition_name" msprop:Generator_ColumnPropNameInRow="position_name" msprop:Generator_ColumnPropNameInTable="position_nameColumn" msprop:Generator_UserColumnName="position_name">
+              <xs:element name="position_name" msprop:Generator_ColumnVarNameInTable="columnposition_name" msprop:Generator_ColumnPropNameInRow="position_name" msprop:Generator_ColumnPropNameInTable="position_nameColumn" msprop:Generator_UserColumnName="position_name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="45" />
@@ -613,293 +882,20 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="payment" msprop:Generator_ColumnVarNameInTable="columnpayment" msprop:Generator_ColumnPropNameInRow="payment" msprop:Generator_ColumnPropNameInTable="paymentColumn" msprop:Generator_UserColumnName="payment" type="xs:int" />
-              <xs:element name="reason" msprop:Generator_ColumnVarNameInTable="columnreason" msprop:Generator_ColumnPropNameInRow="reason" msprop:Generator_ColumnPropNameInTable="reasonColumn" msprop:Generator_UserColumnName="reason">
+              <xs:element name="payment" msprop:Generator_ColumnVarNameInTable="columnpayment" msprop:Generator_ColumnPropNameInRow="payment" msprop:Generator_ColumnPropNameInTable="paymentColumn" msprop:Generator_UserColumnName="payment" type="xs:int" minOccurs="0" />
+              <xs:element name="reason" msprop:Generator_ColumnVarNameInTable="columnreason" msprop:Generator_ColumnPropNameInRow="reason" msprop:Generator_ColumnPropNameInTable="reasonColumn" msprop:Generator_UserColumnName="reason" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="45" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="position_view" msprop:Generator_TableClassName="position_viewDataTable" msprop:Generator_TableVarName="tableposition_view" msprop:Generator_TablePropName="position_view" msprop:Generator_RowDeletingName="position_viewRowDeleting" msprop:Generator_RowChangingName="position_viewRowChanging" msprop:Generator_RowEvHandlerName="position_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="position_viewRowDeleted" msprop:Generator_UserTableName="position_view" msprop:Generator_RowChangedName="position_viewRowChanged" msprop:Generator_RowEvArgName="position_viewRowChangeEvent" msprop:Generator_RowClassName="position_viewRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="company_name" msprop:Generator_ColumnVarNameInTable="columncompany_name" msprop:Generator_ColumnPropNameInRow="company_name" msprop:Generator_ColumnPropNameInTable="company_nameColumn" msprop:Generator_UserColumnName="company_name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="position_name" msprop:Generator_ColumnVarNameInTable="columnposition_name" msprop:Generator_ColumnPropNameInRow="position_name" msprop:Generator_ColumnPropNameInTable="position_nameColumn" msprop:Generator_UserColumnName="position_name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="payment" msprop:Generator_ColumnVarNameInTable="columnpayment" msprop:Generator_ColumnPropNameInRow="payment" msprop:Generator_ColumnPropNameInTable="paymentColumn" msprop:Generator_UserColumnName="payment" type="xs:int" />
-              <xs:element name="conditions" msprop:Generator_ColumnVarNameInTable="columnconditions" msprop:Generator_ColumnPropNameInRow="conditions" msprop:Generator_ColumnPropNameInTable="conditionsColumn" msprop:Generator_UserColumnName="conditions" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="requirements" msprop:Generator_ColumnVarNameInTable="columnrequirements" msprop:Generator_ColumnPropNameInRow="requirements" msprop:Generator_ColumnPropNameInTable="requirementsColumn" msprop:Generator_UserColumnName="requirements" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="archive" msprop:Generator_TableClassName="archiveDataTable" msprop:Generator_TableVarName="tablearchive" msprop:Generator_TablePropName="archive" msprop:Generator_RowDeletingName="archiveRowDeleting" msprop:Generator_RowChangingName="archiveRowChanging" msprop:Generator_RowEvHandlerName="archiveRowChangeEventHandler" msprop:Generator_RowDeletedName="archiveRowDeleted" msprop:Generator_UserTableName="archive" msprop:Generator_RowChangedName="archiveRowChanged" msprop:Generator_RowEvArgName="archiveRowChangeEvent" msprop:Generator_RowClassName="archiveRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="person_id" msprop:Generator_ColumnVarNameInTable="columnperson_id" msprop:Generator_ColumnPropNameInRow="person_id" msprop:Generator_ColumnPropNameInTable="person_idColumn" msprop:Generator_UserColumnName="person_id" type="xs:int" />
-              <xs:element name="position_id" msprop:Generator_ColumnVarNameInTable="columnposition_id" msprop:Generator_ColumnPropNameInRow="position_id" msprop:Generator_ColumnPropNameInTable="position_idColumn" msprop:Generator_UserColumnName="position_id" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="archive_person" msprop:Generator_TableClassName="archive_personDataTable" msprop:Generator_TableVarName="tablearchive_person" msprop:Generator_TablePropName="archive_person" msprop:Generator_RowDeletingName="archive_personRowDeleting" msprop:Generator_RowChangingName="archive_personRowChanging" msprop:Generator_RowEvHandlerName="archive_personRowChangeEventHandler" msprop:Generator_RowDeletedName="archive_personRowDeleted" msprop:Generator_UserTableName="archive_person" msprop:Generator_RowChangedName="archive_personRowChanged" msprop:Generator_RowEvArgName="archive_personRowChangeEvent" msprop:Generator_RowClassName="archive_personRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="passport" msprop:Generator_ColumnVarNameInTable="columnpassport" msprop:Generator_ColumnPropNameInRow="passport" msprop:Generator_ColumnPropNameInTable="passportColumn" msprop:Generator_UserColumnName="passport" type="xs:int" />
-              <xs:element name="fio" msprop:Generator_ColumnVarNameInTable="columnfio" msprop:Generator_ColumnPropNameInRow="fio" msprop:Generator_ColumnPropNameInTable="fioColumn" msprop:Generator_UserColumnName="fio">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="70" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="adress" msprop:Generator_ColumnVarNameInTable="columnadress" msprop:Generator_ColumnPropNameInRow="adress" msprop:Generator_ColumnPropNameInTable="adressColumn" msprop:Generator_UserColumnName="adress">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="contacts" msprop:Generator_ColumnVarNameInTable="columncontacts" msprop:Generator_ColumnPropNameInRow="contacts" msprop:Generator_ColumnPropNameInTable="contactsColumn" msprop:Generator_UserColumnName="contacts">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="11" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="family" msprop:Generator_ColumnVarNameInTable="columnfamily" msprop:Generator_ColumnPropNameInRow="family" msprop:Generator_ColumnPropNameInTable="familyColumn" msprop:Generator_UserColumnName="family" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="liveplace" msprop:Generator_ColumnVarNameInTable="columnliveplace" msprop:Generator_ColumnPropNameInRow="liveplace" msprop:Generator_ColumnPropNameInTable="liveplaceColumn" msprop:Generator_UserColumnName="liveplace" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="archive_position" msprop:Generator_TableClassName="archive_positionDataTable" msprop:Generator_TableVarName="tablearchive_position" msprop:Generator_TablePropName="archive_position" msprop:Generator_RowDeletingName="archive_positionRowDeleting" msprop:Generator_RowChangingName="archive_positionRowChanging" msprop:Generator_RowEvHandlerName="archive_positionRowChangeEventHandler" msprop:Generator_RowDeletedName="archive_positionRowDeleted" msprop:Generator_UserTableName="archive_position" msprop:Generator_RowChangedName="archive_positionRowChanged" msprop:Generator_RowEvArgName="archive_positionRowChangeEvent" msprop:Generator_RowClassName="archive_positionRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="company_id" msprop:Generator_ColumnVarNameInTable="columncompany_id" msprop:Generator_ColumnPropNameInRow="company_id" msprop:Generator_ColumnPropNameInTable="company_idColumn" msprop:Generator_UserColumnName="company_id" type="xs:int" />
-              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="payment" msprop:Generator_ColumnVarNameInTable="columnpayment" msprop:Generator_ColumnPropNameInRow="payment" msprop:Generator_ColumnPropNameInTable="paymentColumn" msprop:Generator_UserColumnName="payment" type="xs:int" />
-              <xs:element name="conditions" msprop:Generator_ColumnVarNameInTable="columnconditions" msprop:Generator_ColumnPropNameInRow="conditions" msprop:Generator_ColumnPropNameInTable="conditionsColumn" msprop:Generator_UserColumnName="conditions" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="requirements" msprop:Generator_ColumnVarNameInTable="columnrequirements" msprop:Generator_ColumnPropNameInRow="requirements" msprop:Generator_ColumnPropNameInTable="requirementsColumn" msprop:Generator_UserColumnName="requirements" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="company" msprop:Generator_TableClassName="companyDataTable" msprop:Generator_TableVarName="tablecompany" msprop:Generator_TablePropName="company" msprop:Generator_RowDeletingName="companyRowDeleting" msprop:Generator_RowChangingName="companyRowChanging" msprop:Generator_RowEvHandlerName="companyRowChangeEventHandler" msprop:Generator_RowDeletedName="companyRowDeleted" msprop:Generator_UserTableName="company" msprop:Generator_RowChangedName="companyRowChanged" msprop:Generator_RowEvArgName="companyRowChangeEvent" msprop:Generator_RowClassName="companyRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="BIK" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBIK" msprop:Generator_ColumnPropNameInRow="BIK" msprop:Generator_ColumnPropNameInTable="BIKColumn" msprop:Generator_UserColumnName="BIK" type="xs:int" />
-              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="adress" msprop:Generator_ColumnVarNameInTable="columnadress" msprop:Generator_ColumnPropNameInRow="adress" msprop:Generator_ColumnPropNameInTable="adressColumn" msprop:Generator_UserColumnName="adress">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="phone" msprop:Generator_ColumnVarNameInTable="columnphone" msprop:Generator_ColumnPropNameInRow="phone" msprop:Generator_ColumnPropNameInTable="phoneColumn" msprop:Generator_UserColumnName="phone">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="11" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="owner" msprop:Generator_ColumnVarNameInTable="columnowner" msprop:Generator_ColumnPropNameInRow="owner" msprop:Generator_ColumnPropNameInTable="ownerColumn" msprop:Generator_UserColumnName="owner" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="job_book" msprop:Generator_TableClassName="job_bookDataTable" msprop:Generator_TableVarName="tablejob_book" msprop:Generator_TablePropName="job_book" msprop:Generator_RowDeletingName="job_bookRowDeleting" msprop:Generator_RowChangingName="job_bookRowChanging" msprop:Generator_RowEvHandlerName="job_bookRowChangeEventHandler" msprop:Generator_RowDeletedName="job_bookRowDeleted" msprop:Generator_UserTableName="job_book" msprop:Generator_RowChangedName="job_bookRowChanged" msprop:Generator_RowEvArgName="job_bookRowChangeEvent" msprop:Generator_RowClassName="job_bookRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="id_person" msprop:Generator_ColumnVarNameInTable="columnid_person" msprop:Generator_ColumnPropNameInRow="id_person" msprop:Generator_ColumnPropNameInTable="id_personColumn" msprop:Generator_UserColumnName="id_person" type="xs:int" />
-              <xs:element name="profession" msprop:Generator_ColumnVarNameInTable="columnprofession" msprop:Generator_ColumnPropNameInRow="profession" msprop:Generator_ColumnPropNameInTable="professionColumn" msprop:Generator_UserColumnName="profession">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="education" msprop:Generator_ColumnVarNameInTable="columneducation" msprop:Generator_ColumnPropNameInRow="education" msprop:Generator_ColumnPropNameInTable="educationColumn" msprop:Generator_UserColumnName="education">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="requirements" msprop:Generator_ColumnVarNameInTable="columnrequirements" msprop:Generator_ColumnPropNameInRow="requirements" msprop:Generator_ColumnPropNameInTable="requirementsColumn" msprop:Generator_UserColumnName="requirements" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="last_job_place_id" msprop:Generator_ColumnVarNameInTable="columnlast_job_place_id" msprop:Generator_ColumnPropNameInRow="last_job_place_id" msprop:Generator_ColumnPropNameInTable="last_job_place_idColumn" msprop:Generator_UserColumnName="last_job_place_id" type="xs:int" />
-              <xs:element name="position" msprop:Generator_ColumnVarNameInTable="columnposition" msprop:Generator_ColumnPropNameInRow="position" msprop:Generator_ColumnPropNameInTable="positionColumn" msprop:Generator_UserColumnName="position" type="xs:int" />
-              <xs:element name="reason" msprop:Generator_ColumnVarNameInTable="columnreason" msprop:Generator_ColumnPropNameInRow="reason" msprop:Generator_ColumnPropNameInTable="reasonColumn" msprop:Generator_UserColumnName="reason">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="jobless" msprop:Generator_TableClassName="joblessDataTable" msprop:Generator_TableVarName="tablejobless" msprop:Generator_TablePropName="jobless" msprop:Generator_RowDeletingName="joblessRowDeleting" msprop:Generator_RowChangingName="joblessRowChanging" msprop:Generator_RowEvHandlerName="joblessRowChangeEventHandler" msprop:Generator_RowDeletedName="joblessRowDeleted" msprop:Generator_UserTableName="jobless" msprop:Generator_RowChangedName="joblessRowChanged" msprop:Generator_RowEvArgName="joblessRowChangeEvent" msprop:Generator_RowClassName="joblessRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="passport" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpassport" msprop:Generator_ColumnPropNameInRow="passport" msprop:Generator_ColumnPropNameInTable="passportColumn" msprop:Generator_UserColumnName="passport" type="xs:int" />
-              <xs:element name="fio" msprop:Generator_ColumnVarNameInTable="columnfio" msprop:Generator_ColumnPropNameInRow="fio" msprop:Generator_ColumnPropNameInTable="fioColumn" msprop:Generator_UserColumnName="fio">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="70" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="adress" msprop:Generator_ColumnVarNameInTable="columnadress" msprop:Generator_ColumnPropNameInRow="adress" msprop:Generator_ColumnPropNameInTable="adressColumn" msprop:Generator_UserColumnName="adress">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="contacts" msprop:Generator_ColumnVarNameInTable="columncontacts" msprop:Generator_ColumnPropNameInRow="contacts" msprop:Generator_ColumnPropNameInTable="contactsColumn" msprop:Generator_UserColumnName="contacts">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="11" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="family" msprop:Generator_ColumnVarNameInTable="columnfamily" msprop:Generator_ColumnPropNameInRow="family" msprop:Generator_ColumnPropNameInTable="familyColumn" msprop:Generator_UserColumnName="family" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="liveplace" msprop:Generator_ColumnVarNameInTable="columnliveplace" msprop:Generator_ColumnPropNameInRow="liveplace" msprop:Generator_ColumnPropNameInTable="liveplaceColumn" msprop:Generator_UserColumnName="liveplace" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="position" msprop:Generator_TableClassName="positionDataTable" msprop:Generator_TableVarName="tableposition" msprop:Generator_TablePropName="position" msprop:Generator_RowDeletingName="positionRowDeleting" msprop:Generator_RowChangingName="positionRowChanging" msprop:Generator_RowEvHandlerName="positionRowChangeEventHandler" msprop:Generator_RowDeletedName="positionRowDeleted" msprop:Generator_UserTableName="position" msprop:Generator_RowChangedName="positionRowChanged" msprop:Generator_RowEvArgName="positionRowChangeEvent" msprop:Generator_RowClassName="positionRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="company_id" msprop:Generator_ColumnVarNameInTable="columncompany_id" msprop:Generator_ColumnPropNameInRow="company_id" msprop:Generator_ColumnPropNameInTable="company_idColumn" msprop:Generator_UserColumnName="company_id" type="xs:int" />
-              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="payment" msprop:Generator_ColumnVarNameInTable="columnpayment" msprop:Generator_ColumnPropNameInRow="payment" msprop:Generator_ColumnPropNameInTable="paymentColumn" msprop:Generator_UserColumnName="payment" type="xs:int" />
-              <xs:element name="conditions" msprop:Generator_ColumnVarNameInTable="columnconditions" msprop:Generator_ColumnPropNameInRow="conditions" msprop:Generator_ColumnPropNameInTable="conditionsColumn" msprop:Generator_UserColumnName="conditions" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="requirements" msprop:Generator_ColumnVarNameInTable="columnrequirements" msprop:Generator_ColumnPropNameInRow="requirements" msprop:Generator_ColumnPropNameInTable="requirementsColumn" msprop:Generator_UserColumnName="requirements" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="proposition" msprop:Generator_TableClassName="propositionDataTable" msprop:Generator_TableVarName="tableproposition" msprop:Generator_TablePropName="proposition" msprop:Generator_RowDeletingName="propositionRowDeleting" msprop:Generator_RowChangingName="propositionRowChanging" msprop:Generator_RowEvHandlerName="propositionRowChangeEventHandler" msprop:Generator_RowDeletedName="propositionRowDeleted" msprop:Generator_UserTableName="proposition" msprop:Generator_RowChangedName="propositionRowChanged" msprop:Generator_RowEvArgName="propositionRowChangeEvent" msprop:Generator_RowClassName="propositionRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="person_id" msprop:Generator_ColumnVarNameInTable="columnperson_id" msprop:Generator_ColumnPropNameInRow="person_id" msprop:Generator_ColumnPropNameInTable="person_idColumn" msprop:Generator_UserColumnName="person_id" type="xs:int" />
-              <xs:element name="position_id" msprop:Generator_ColumnVarNameInTable="columnposition_id" msprop:Generator_ColumnPropNameInRow="position_id" msprop:Generator_ColumnPropNameInTable="position_idColumn" msprop:Generator_UserColumnName="position_id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:person_view" />
-      <xs:field xpath="mstns:passport" />
-    </xs:unique>
-    <xs:unique name="position_view_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:position_view" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
@@ -927,18 +923,23 @@
       <xs:selector xpath=".//mstns:position" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
+    <xs:unique name="person_view_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:person_view" />
+      <xs:field xpath="mstns:passport" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="archive_first" msdata:parent="archive_person" msdata:child="archive" msdata:parentkey="passport" msdata:childkey="person_id" msprop:Generator_UserChildTable="archive" msprop:Generator_ChildPropName="GetarchiveRows" msprop:Generator_UserRelationName="archive_first" msprop:Generator_RelationVarName="relationarchive_first" msprop:Generator_UserParentTable="archive_person" msprop:Generator_ParentPropName="archive_personRow" />
-      <msdata:Relationship name="archive_second" msdata:parent="archive_position" msdata:child="archive" msdata:parentkey="id" msdata:childkey="position_id" msprop:Generator_UserChildTable="archive" msprop:Generator_ChildPropName="GetarchiveRows" msprop:Generator_UserRelationName="archive_second" msprop:Generator_RelationVarName="relationarchive_second" msprop:Generator_UserParentTable="archive_position" msprop:Generator_ParentPropName="archive_positionRow" />
-      <msdata:Relationship name="company_fk_3" msdata:parent="company" msdata:child="archive_position" msdata:parentkey="BIK" msdata:childkey="company_id" msprop:Generator_UserChildTable="archive_position" msprop:Generator_ChildPropName="Getarchive_positionRows" msprop:Generator_UserRelationName="company_fk_3" msprop:Generator_RelationVarName="relationcompany_fk_3" msprop:Generator_UserParentTable="company" msprop:Generator_ParentPropName="companyRow" />
-      <msdata:Relationship name="company_fk" msdata:parent="company" msdata:child="job_book" msdata:parentkey="BIK" msdata:childkey="last_job_place_id" msprop:Generator_UserChildTable="job_book" msprop:Generator_ChildPropName="Getjob_bookRows" msprop:Generator_UserRelationName="company_fk" msprop:Generator_ParentPropName="companyRow" msprop:Generator_RelationVarName="relationcompany_fk" msprop:Generator_UserParentTable="company" />
-      <msdata:Relationship name="person_fk" msdata:parent="archive_person" msdata:child="job_book" msdata:parentkey="passport" msdata:childkey="id_person" msprop:Generator_UserChildTable="job_book" msprop:Generator_ChildPropName="Getjob_bookRows" msprop:Generator_UserRelationName="person_fk" msprop:Generator_ParentPropName="archive_personRow" msprop:Generator_RelationVarName="relationperson_fk" msprop:Generator_UserParentTable="archive_person" />
-      <msdata:Relationship name="prev_job_fk" msdata:parent="archive_position" msdata:child="job_book" msdata:parentkey="id" msdata:childkey="position" msprop:Generator_UserChildTable="job_book" msprop:Generator_ChildPropName="Getjob_bookRows" msprop:Generator_UserRelationName="prev_job_fk" msprop:Generator_ParentPropName="archive_positionRow" msprop:Generator_RelationVarName="relationprev_job_fk" msprop:Generator_UserParentTable="archive_position" />
-      <msdata:Relationship name="company_fk2" msdata:parent="company" msdata:child="position" msdata:parentkey="BIK" msdata:childkey="company_id" msprop:Generator_UserChildTable="position" msprop:Generator_ChildPropName="GetpositionRows" msprop:Generator_UserRelationName="company_fk2" msprop:Generator_ParentPropName="companyRow" msprop:Generator_RelationVarName="relationcompany_fk2" msprop:Generator_UserParentTable="company" />
-      <msdata:Relationship name="prop_first" msdata:parent="jobless" msdata:child="proposition" msdata:parentkey="passport" msdata:childkey="person_id" msprop:Generator_UserChildTable="proposition" msprop:Generator_ChildPropName="GetpropositionRows" msprop:Generator_UserRelationName="prop_first" msprop:Generator_ParentPropName="joblessRow" msprop:Generator_RelationVarName="relationprop_first" msprop:Generator_UserParentTable="jobless" />
-      <msdata:Relationship name="prop_second" msdata:parent="position" msdata:child="proposition" msdata:parentkey="id" msdata:childkey="position_id" msprop:Generator_UserChildTable="proposition" msprop:Generator_ChildPropName="GetpropositionRows" msprop:Generator_UserRelationName="prop_second" msprop:Generator_ParentPropName="positionRow" msprop:Generator_RelationVarName="relationprop_second" msprop:Generator_UserParentTable="position" />
+      <msdata:Relationship name="archive_first" msdata:parent="archive_person" msdata:child="archive" msdata:parentkey="passport" msdata:childkey="person_id" msprop:Generator_UserChildTable="archive" msprop:Generator_ChildPropName="GetarchiveRows" msprop:Generator_UserRelationName="archive_first" msprop:Generator_ParentPropName="archive_personRow" msprop:Generator_RelationVarName="relationarchive_first" msprop:Generator_UserParentTable="archive_person" />
+      <msdata:Relationship name="archive_second" msdata:parent="archive_position" msdata:child="archive" msdata:parentkey="id" msdata:childkey="position_id" msprop:Generator_UserChildTable="archive" msprop:Generator_ChildPropName="GetarchiveRows" msprop:Generator_UserRelationName="archive_second" msprop:Generator_ParentPropName="archive_positionRow" msprop:Generator_RelationVarName="relationarchive_second" msprop:Generator_UserParentTable="archive_position" />
+      <msdata:Relationship name="company_fk_3" msdata:parent="company" msdata:child="archive_position" msdata:parentkey="BIK" msdata:childkey="company_id" msprop:Generator_UserChildTable="archive_position" msprop:Generator_ChildPropName="Getarchive_positionRows" msprop:Generator_UserRelationName="company_fk_3" msprop:Generator_ParentPropName="companyRow" msprop:Generator_RelationVarName="relationcompany_fk_3" msprop:Generator_UserParentTable="company" />
+      <msdata:Relationship name="company_fk" msdata:parent="company" msdata:child="job_book" msdata:parentkey="BIK" msdata:childkey="last_job_place_id" msprop:Generator_UserChildTable="job_book" msprop:Generator_ChildPropName="Getjob_bookRows" msprop:Generator_UserRelationName="company_fk" msprop:Generator_RelationVarName="relationcompany_fk" msprop:Generator_UserParentTable="company" msprop:Generator_ParentPropName="companyRow" />
+      <msdata:Relationship name="person_fk" msdata:parent="archive_person" msdata:child="job_book" msdata:parentkey="passport" msdata:childkey="id_person" msprop:Generator_UserChildTable="job_book" msprop:Generator_ChildPropName="Getjob_bookRows" msprop:Generator_UserRelationName="person_fk" msprop:Generator_RelationVarName="relationperson_fk" msprop:Generator_UserParentTable="archive_person" msprop:Generator_ParentPropName="archive_personRow" />
+      <msdata:Relationship name="prev_job_fk" msdata:parent="archive_position" msdata:child="job_book" msdata:parentkey="id" msdata:childkey="position" msprop:Generator_UserChildTable="job_book" msprop:Generator_ChildPropName="Getjob_bookRows" msprop:Generator_UserRelationName="prev_job_fk" msprop:Generator_RelationVarName="relationprev_job_fk" msprop:Generator_UserParentTable="archive_position" msprop:Generator_ParentPropName="archive_positionRow" />
+      <msdata:Relationship name="company_fk2" msdata:parent="company" msdata:child="position" msdata:parentkey="BIK" msdata:childkey="company_id" msprop:Generator_UserChildTable="position" msprop:Generator_ChildPropName="GetpositionRows" msprop:Generator_UserRelationName="company_fk2" msprop:Generator_RelationVarName="relationcompany_fk2" msprop:Generator_UserParentTable="company" msprop:Generator_ParentPropName="companyRow" />
+      <msdata:Relationship name="prop_first" msdata:parent="jobless" msdata:child="proposition" msdata:parentkey="passport" msdata:childkey="person_id" msprop:Generator_UserChildTable="proposition" msprop:Generator_ChildPropName="GetpropositionRows" msprop:Generator_UserRelationName="prop_first" msprop:Generator_RelationVarName="relationprop_first" msprop:Generator_UserParentTable="jobless" msprop:Generator_ParentPropName="joblessRow" />
+      <msdata:Relationship name="prop_second" msdata:parent="position" msdata:child="proposition" msdata:parentkey="id" msdata:childkey="position_id" msprop:Generator_UserChildTable="proposition" msprop:Generator_ChildPropName="GetpropositionRows" msprop:Generator_UserRelationName="prop_second" msprop:Generator_RelationVarName="relationprop_second" msprop:Generator_UserParentTable="position" msprop:Generator_ParentPropName="positionRow" />
+      <msdata:Relationship name="person_fk1" msdata:parent="jobless" msdata:child="job_book" msdata:parentkey="passport" msdata:childkey="id_person" msprop:Generator_UserChildTable="job_book" msprop:Generator_ChildPropName="Getjob_bookRows" msprop:Generator_UserRelationName="person_fk1" msprop:Generator_RelationVarName="relationperson_fk1" msprop:Generator_UserParentTable="jobless" msprop:Generator_ParentPropName="joblessRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

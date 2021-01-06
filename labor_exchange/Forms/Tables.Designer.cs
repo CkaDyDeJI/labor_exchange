@@ -33,6 +33,8 @@ namespace labor_exchange
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tables));
             this.archiveBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.archiveBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.labor_exchangeDataSet = new labor_exchange.labor_exchangeDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -45,13 +47,11 @@ namespace labor_exchange
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.archiveBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.archiveDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.archiveBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labor_exchangeDataSet = new labor_exchange.labor_exchangeDataSet();
             this.tableAdapterManager = new labor_exchange.labor_exchangeDataSetTableAdapters.TableAdapterManager();
             this.archive_personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.archive_positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -70,10 +70,10 @@ namespace labor_exchange
             this.propositionTableAdapter = new labor_exchange.labor_exchangeDataSetTableAdapters.propositionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.archiveBindingNavigator)).BeginInit();
             this.archiveBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.archiveBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labor_exchangeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.archive_personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archive_positionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
@@ -109,7 +109,7 @@ namespace labor_exchange
             this.archiveBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.archiveBindingNavigator.Name = "archiveBindingNavigator";
             this.archiveBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.archiveBindingNavigator.Size = new System.Drawing.Size(1097, 25);
+            this.archiveBindingNavigator.Size = new System.Drawing.Size(777, 25);
             this.archiveBindingNavigator.TabIndex = 0;
             this.archiveBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -121,6 +121,16 @@ namespace labor_exchange
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // archiveBindingSource
+            // 
+            this.archiveBindingSource.DataMember = "archive";
+            this.archiveBindingSource.DataSource = this.labor_exchangeDataSet;
+            // 
+            // labor_exchangeDataSet
+            // 
+            this.labor_exchangeDataSet.DataSetName = "labor_exchangeDataSet";
+            this.labor_exchangeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -218,8 +228,14 @@ namespace labor_exchange
             this.archiveDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.archiveDataGridView.Location = new System.Drawing.Point(0, 0);
             this.archiveDataGridView.Name = "archiveDataGridView";
-            this.archiveDataGridView.Size = new System.Drawing.Size(563, 301);
+            this.archiveDataGridView.Size = new System.Drawing.Size(736, 301);
             this.archiveDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "person_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "person_id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // label1
             // 
@@ -242,7 +258,7 @@ namespace labor_exchange
             "jobless",
             "position",
             "proposition"});
-            this.comboBox1.Location = new System.Drawing.Point(547, 47);
+            this.comboBox1.Location = new System.Drawing.Point(648, 39);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
@@ -251,39 +267,31 @@ namespace labor_exchange
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 422);
+            this.label2.Location = new System.Drawing.Point(30, 370);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.archiveDataGridView);
-            this.panel1.Location = new System.Drawing.Point(33, 103);
+            this.panel1.Location = new System.Drawing.Point(33, 66);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 301);
+            this.panel1.Size = new System.Drawing.Size(736, 301);
             this.panel1.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "person_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "person_id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // archiveBindingSource
-            // 
-            this.archiveBindingSource.DataMember = "archive";
-            this.archiveBindingSource.DataSource = this.labor_exchangeDataSet;
-            // 
-            // labor_exchangeDataSet
-            // 
-            this.labor_exchangeDataSet.DataSetName = "labor_exchangeDataSet";
-            this.labor_exchangeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.archive_personTableAdapter = null;
+            this.tableAdapterManager.archive_positionTableAdapter = null;
+            this.tableAdapterManager.archiveTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.companyTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.job_bookTableAdapter = null;
+            this.tableAdapterManager.joblessTableAdapter = null;
+            this.tableAdapterManager.positionTableAdapter = null;
+            this.tableAdapterManager.propositionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = labor_exchange.labor_exchangeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // archive_personBindingSource
@@ -357,7 +365,7 @@ namespace labor_exchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1097, 611);
+            this.ClientSize = new System.Drawing.Size(777, 388);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
@@ -369,10 +377,10 @@ namespace labor_exchange
             ((System.ComponentModel.ISupportInitialize)(this.archiveBindingNavigator)).EndInit();
             this.archiveBindingNavigator.ResumeLayout(false);
             this.archiveBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.archiveBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labor_exchangeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.archive_personBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archive_positionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();

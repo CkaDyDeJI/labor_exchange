@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Dapper;
@@ -53,6 +47,9 @@ namespace labor_exchange
                     var tempComp = conn.QueryFirstOrDefault <string> ($"select bik from company where name = '{comboBox1.Text}'");
                     var tempPos = conn.QueryFirstOrDefault <string> ($"select id from archive_position where name = '{comboBox2.Text}'");
                     conn.Query ($"insert into job_book(id_person, profession, education, requirements, last_job_place_id, position, reason) values ({textBox1.Text}, '{textBox7.Text}', '{textBox8.Text}', '{textBox9.Text}', {tempComp}, {tempPos}, '{textBox12.Text}')");
+
+                    MessageBox.Show ("Добавлено успешно");
+                    this.Dispose();
                 }
             }
             catch {

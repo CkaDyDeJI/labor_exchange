@@ -137,7 +137,7 @@ namespace labor_exchange
             this.groupBox2.Controls.Add(this.textBox9);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Location = new System.Drawing.Point(344, 12);
+            this.groupBox2.Location = new System.Drawing.Point(325, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(368, 256);
             this.groupBox2.TabIndex = 7;
@@ -312,7 +312,7 @@ namespace labor_exchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 270);
+            this.ClientSize = new System.Drawing.Size(700, 270);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
